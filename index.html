@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <form action="#">
+            <div>
+                <p>
+                    <input type="checkbox" id="hiking" />
+                    <label for="hiking">Hiking</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="biking" />
+                    <label for="biking">Biking</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="climbing" />
+                    <label for="climbing">Climbing</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="camping" />
+                    <label for="camping">Camping</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="fishing" />
+                    <label for="fishing">Fishing</label>
+                </p>
+            </div>
+            <div class="input-field col s12">
+                <select id="location">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="westernCO">Western Colorado</option>
+                    <option value="eastern colorado">Eastern Colorado</option>
+                </select>
+                <label>Region of Colorado</label>
+            </div>
+
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+
+        </form>
+        <div class="cards">
+        </div>
+
+
+
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH_MUZGvRsoRAT1PXTOaQGJLx_QnSVDwM"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
