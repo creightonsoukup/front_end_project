@@ -26,15 +26,7 @@ $(document).ready(function() {
 //Gets checked values
  $("button").on('click', function(event) {
    event.preventDefault();
-   $.ajax({
-       url: "https://api.instagram.com/oauth/authorize/?client_id=ccb70a484a5a46198e08d7f50d38ee5e&redirect_uri=REDIRECT-URI&response_type=token",
-       error: function(err) {
-             console.error(err)
-         },
-       method: 'GET',
-       success: function(data) {
 
-       })
    var activities = []
    var checkbox = $("input[type='checkbox']")
    for (var i = 0; i < checkbox.length; i++) {
@@ -74,26 +66,24 @@ $(document).ready(function() {
 
            for (var i = 0; i < data.RECDATA.length; i++) {
          //create card
+
          $(".cards").append(
            $("<div/>", {'class':'row'}).append(
-             $("<div/>", {'class':'col s12 m7'}).append(
-               $("<div/>", {'class':'card'}).append(
-                 $("<div/>", {'class':'card-image'}).append(
-                   $("<img/>", {'src':'http://lorempixel.com/400/200/'}),
-                   $("<span/>", {"class":"card-title","text":""+data.RECDATA[i].RecAreaName+""})
-                 )
-               ).append(
-                 $("<div/>", {'class':'card-content'}).append(
+             $("<div/>", {'class':'col s6 offset-s3'}).append(
+               $("<div/>", {'class':'card blue-grey darken-1'}).append(
+                 $("<div/>", {'class':'card-content white-text'}).append(
+                   $("<span/>", {"class":"card-title","text":""+data.RECDATA[i].RecAreaName+""}),
                    $("<p/>", {'text':""+data.RECDATA[i].RecAreaDescription.replace(/<\/?A[^>]*>/g, "").replace(/<\/?a[^>]*>/g, "")+""})
                  )
                ).append(
                  $("<div/>", {'class':'card-action'}).append(
                    $("<a/>", {'href':'#','text':'This is a link'})
-                 )
+
                )
              )
            )
          )
+       )
        }
        }
      })
