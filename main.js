@@ -108,9 +108,15 @@ $(document).ready(function() {
        method: 'GET',
        success: function(data) {
 
-           for (var i = 0; i < data.RECDATA.length; i++) {
+          for (var i = 0; i < data.RECDATA.length; i++) {
+            console.log(data.RECDATA[i].RecAreaName)
+          }
          //create card
+         for (var i = 0; i < data.RECDATA.length; i++) {
 
+           if (i != 0 && data.RECDATA[i].RecAreaName === data.RECDATA[i-1].RecAreaName) {
+             continue
+           }
          $(".cards").append(
            $("<div/>", {'class':'row'}).append(
              $("<div/>", {'class':'col s6 offset-s3'}).append(
@@ -128,8 +134,9 @@ $(document).ready(function() {
            )
          )
        )
-       }
-       }
+     }
+     }
+
      })
  })
 
