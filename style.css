@@ -31,3 +31,15 @@ label {
   border: 2px solid white;
   color:white;
 }
+
+.input-field label {
+  color: white;
+}
+
+div.input-field.col.s3.offset-s1 {
+  top:15px;
+}
+
+input.select-dropdown {
+  color: white;
+}
