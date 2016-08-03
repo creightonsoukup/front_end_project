@@ -138,7 +138,11 @@ $(document).ready(function() {
      }
 
      })
+     $("html,body").animate({
+       scrollTop: $(".cards").offset().top
+     },2000);
  })
+
 
 
 
