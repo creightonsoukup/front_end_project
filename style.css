@@ -43,3 +43,13 @@ div.input-field.col.s3.offset-s1 {
 input.select-dropdown {
   color: white;
 }
+
+p#moreInfo {
+  margin: 0;
+  color: #ffab40;
+  font-size: 16px;
+}
+
+div.landing {
+  margin-bottom: 30px;
+}
