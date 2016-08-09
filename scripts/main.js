@@ -3,9 +3,7 @@ $(document).ready(function() {
     $('select').material_select();
 
 });
-// //$(".moreinfo").on('click',".slider", function() {
-//     $(this).slider()
-// })
+
 
 var currentRecArea = ""
 var selectedRecArea = ""
@@ -64,12 +62,13 @@ $("button").on('click', function(event) {
             }, 2000);
             $("form")[0].reset()
             $(".more-info").on('click', (function() {
-
+                $('.slider').remove()
                 var directions = $(this).prev()
                 directions.toggle()
-                selectedRecArea = $(this).attr("id")
-                selectedRecAreaUrl = "&tags=" + selectedRecArea.split(" ").join("+")
+                selectedRecArea = $(this).attr("id").split(",")
 
+                selectedRecAreaUrl = "&lon=" + selectedRecArea[0] + "&lat=" + selectedRecArea[1] + "&radius=.5"
+                console.log(selectedRecAreaUrl)
 
                 photoURL = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=3ffd3415340ed60a1dcd3548c3790329&format=json&nojsoncallback=1" + selectedRecAreaUrl
                 $.get(photoURL)
@@ -124,9 +123,45 @@ $("button").on('click', function(event) {
                                         "src": "" + img4 + ""
                                     })
                                 )
-                            )))
+                            ).append(
+                                $("<li/>").append(
+                                    $("<img/>", {
+                                        "src": "" + img5 + ""
+                                    })
+                                )
 
-                      $('.slider').slider();
+                            ).append(
+                                $("<li/>").append(
+                                    $("<img/>", {
+                                        "src": "" + img6 + ""
+                                    })
+                                )
+
+                            ).append(
+                                $("<li/>").append(
+                                    $("<img/>", {
+                                        "src": "" + img7 + ""
+                                    })
+                                )
+
+                            ).append(
+                                $("<li/>").append(
+                                    $("<img/>", {
+                                        "src": "" + img8 + ""
+                                    })
+                                )
+
+                            ).append(
+                                $("<li/>").append(
+                                    $("<img/>", {
+                                        "src": "" + img9 + ""
+                                    })
+                                )
+
+                            )
+                        ))
+
+                        $('.slider').slider();
                     })
 
             }))
@@ -195,7 +230,7 @@ function makeCards(data) {
                             $("<button/>", {
                                 'class': 'more-info btn waves-effect waves-light',
                                 'text': 'More Info',
-                                "id": "" + data.RECDATA[i].RecAreaName + ""
+                                "id": "" + data.RECDATA[i]["GEOJSON"]["COORDINATES"][0] + "," + data.RECDATA[i]["GEOJSON"]["COORDINATES"][1] + ""
 
                             })
                         )

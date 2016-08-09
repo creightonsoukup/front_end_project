@@ -76,3 +76,7 @@ img#logo {
 div.cards {
   padding-top: 2%;
 }
+
+li.indicator-item.ative {
+  background-color: blue;
+}
