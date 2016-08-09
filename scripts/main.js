@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
     $('select').material_select();
-    $(".slider").on('focus', function() {
-        $(this).slider()
-    })
-});
 
+});
+// //$(".moreinfo").on('click',".slider", function() {
+//     $(this).slider()
+// })
 
 var currentRecArea = ""
 var selectedRecArea = ""
@@ -126,7 +126,7 @@ $("button").on('click', function(event) {
                                 )
                             )))
 
-
+                      $('.slider').slider();
                     })
 
             }))

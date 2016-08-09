@@ -1,0 +1,23 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase open
+[debug] CLI Version:  3.0.6
+[debug] Platform:     darwin
+[debug] Node Version: v4.4.0
+[debug] Time:         Tue Aug 09 2016 07:23:42 GMT-0600 (MDT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/rec-app-4976c 
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/rec-app-4976c/tokens 
+[debug] <<< HTTP RESPONSE 200
+[debug] TypeError: Cannot read property 'setRawMode' of null
+    at ReadStream.setRawMode (tty.js:49:15)
+    at Interface._setRawMode (readline.js:174:23)
+    at Interface.close (readline.js:283:10)
+    at ReadStream.ontermend (readline.js:102:10)
+    at emitNone (events.js:72:20)
+    at ReadStream.emit (events.js:166:7)
+    at endReadableNT (_stream_readable.js:905:12)
+    at nextTickCallbackWith2Args (node.js:442:9)
+    at process._tickCallback (node.js:356:17)
