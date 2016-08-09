@@ -39,10 +39,11 @@ label {
 
 .input-field label {
   color: white;
+  padding-top: 15px;
 }
 
-div.input-field.col.s3.offset-s1 {
-  top:15px;
+div.input-field.col.l4.offset-l1.m4.s8 {
+  padding-top: 14px;
 }
 
 input.select-dropdown {
