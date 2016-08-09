@@ -13,14 +13,19 @@
 
 <body>
 
+
     <div class="landing">
-        <div>
+      <div id="logo">
+      <img id="logo" src="logo.png" alt="logo">
+    </div>
+      <div class="row content">
+        <div class="col s7 offset-s6">
             <header>
                 <h1>What Is Your Next Adventure?</h1>
             </header>
             <form action="#">
                 <div class="row">
-                    <div class="col s1 offset-s5">
+                    <div class="col s1">
                       <div>
 
                         <p>
@@ -67,17 +72,18 @@
                   </div>
                 </div>
                 <div class="row">
-                    <div class=" col s2 offset-s5">
+                    <div class=" col s2">
 
                         <button class="btn waves-effect waves-light" type="submit" name="action">Explore
                         </button>
                     </div>
+                    <div id=".save-status" class="col s2 offset 8">
+
+                    </div>
                 </div>
-
-
-
             </form>
         </div>
+      </div>
 
     </div>
 
@@ -85,11 +91,13 @@
     </div>
 
 
+
     <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH_MUZGvRsoRAT1PXTOaQGJLx_QnSVDwM"></script>
     <script src="scripts/locations.js"></script>
     <script src="scripts/main.js"></script>
+  
 </body>
 
 </html>

@@ -9,15 +9,20 @@ div.landing {
   margin: 0;
 }
 
+div.content {
+  padding-top: 10%;
+
+}
+
 
 h1 {
   color:white;
-  display: flex;
-  justify-content: flex-end;
   padding-right: 7%;
   padding-top: 9%;
   margin-top: 0;
+  font-size: 3em;
 }
+
 
 .input-field input[type=checkbox] + label {
   color:white;
@@ -50,6 +55,24 @@ p#moreInfo {
   font-size: 16px;
 }
 
-div.landing {
-  margin-bottom: 30px;
+#logo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+img#logo {
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
+.select-wrapper span.caret {
+  color: white;
+}
+
+.select-wrapper + label {
+  font-size: .9rem;
+}
+
+div.cards {
+  padding-top: 2%;
 }
