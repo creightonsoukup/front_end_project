@@ -187,7 +187,7 @@ function makeCards(data) {
                 'class': 'row removecards',
             }).append(
                 $("<div/>", {
-                    'class': 'col s8 offset-s2'
+                    'class': 'col l8 offset-l2'
                 }).append(
                     $("<div/>", {
                         'class': 'card blue-grey darken-1'
